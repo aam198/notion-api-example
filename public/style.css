@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 
+:root {
+  --var-error: #FE5F55;
+}
 
 body, html{
   padding: 0;
@@ -11,18 +14,19 @@ body, html{
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
 
-  background-color: #84A98C;
+  background-color: #B8D8D8;
 }
 
 .banner{
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-color: #2F3E46;
-  color: #CAD2C5;
+  background-color: #4F6367;
+  color: #EEF5DB;
   font-weight: bold;
+  font-size: 1.8rem;
 }
 
 .wrapper {
@@ -48,6 +52,8 @@ body, html{
   justify-content: center;
   align-items: center;
 
+  background-color: #EEF5DB;
+  color: #4F6367;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 10px;
 }

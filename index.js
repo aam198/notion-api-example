@@ -6,13 +6,13 @@ import { Client } from "@notionhq/client";
 const notion = new Client({ auth: process.env.NOTION_KEY });
 const databaseId = process.env.NOTION_DATABASE_ID;
 
-// Database connection test
+// Export getDatabase 
 const getDatabase = async () => {
   const response = await notion.databases.query({
     database_id: databaseId})
 
     console.log(response);
-    // Mapping through the paths 
+    // Mapping through the paths
     const responseResults = response.results.map((page) => {
       return {
         id: page.id,
@@ -26,7 +26,9 @@ const getDatabase = async () => {
     return responseResults;
 }
 
-getDatabase();
+export default getDatabase();
+
+// To add an item
 
 // async function addItem(text) {
 //   try {

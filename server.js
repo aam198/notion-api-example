@@ -1,16 +1,16 @@
-import express from "express";
+const express = require("express");
 // Retrieve Module
-import  moduleToFetch from "./index.js";
-// Connect Get the function
-const getDatabase = moduleToFetch.getDatabase;
+const  moduleToFetch = require("./index.js");
+// import getDatabases() from index.js
+const getDatabase  = moduleToFetch.getDatabase;
 
 const port = 8000;
 const app = express();
 
-// To connect to frontend and by accessing /users route.
+// To connect to frontend and accessing by /users route.
 app.use(express.static("public"));
 
-app.get("/users", async(req, res) => {
+app.get("/users", async (req, res) => {
   // Callback to invoke getDatabase function
   const users = await getDatabase();
   res.json(users);

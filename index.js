@@ -1,13 +1,13 @@
-import * as dotenv from 'dotenv'
+const dotenv = require('dotenv');
 dotenv.config();
-import { Client } from "@notionhq/client";
+const { Client } = require("@notionhq/client");
 
 // Initalize the client 
 const notion = new Client({ auth: process.env.NOTION_KEY });
 const databaseId = process.env.NOTION_DATABASE_ID;
 
-// Export getDatabase 
-const getDatabase = async () => {
+// Export getDatabase() to bring into server.js 
+exports.getDatabase = async function () {
   const response = await notion.databases.query({
     database_id: databaseId})
 
@@ -26,7 +26,6 @@ const getDatabase = async () => {
     return responseResults;
 }
 
-export default getDatabase();
 
 // To add an item
 

@@ -11,6 +11,7 @@ console.log(res);
 // Add data to HTML
 
 const addData = async () => {
+  // Call for data from function above 
   const data = await getDataFromBackend();
 
   // Map through each value

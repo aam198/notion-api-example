@@ -29,7 +29,7 @@ exports.getDatabase = async function () {
 // To add a new entry
 // Notion API - Create a Page: https://developers.notion.com/reference/post-page
 exports.newEntryToDatabase = async function (name, address) {
-  const response = await notion.page.create({
+  const response = await notion.pages.create({
     parent: {
       database_id: databaseId,
     },

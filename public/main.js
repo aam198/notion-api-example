@@ -1,3 +1,10 @@
+const container = document.getElementById("container");
+const newUserButton = document.getElementById("newUserButton");
+const closeFormButton = document.getElementById("closeFormButton");
+const addUserFormContainer = document.getElementById("addUserFormContainer");
+
+
+
 const getDataFromBackend = async () => {
   const rest = await fetch("http://localhost:8000/users");
   const data = await rest.json();
@@ -6,10 +13,9 @@ const getDataFromBackend = async () => {
 };
 
 const res = getDataFromBackend();
-console.log(res);
+  console.log(res);
 
 // Add data to HTML
-
 const addData = async () => {
   // Call for data from function above 
   const data = await getDataFromBackend();
@@ -27,3 +33,16 @@ const addData = async () => {
 };
 
 addData();
+
+// Event Listeners
+
+// New User Add
+newUserButton.addEventListener("click", () => {
+  // Show modal
+  addUserFormContainer.style.display="flex";
+});
+
+// Close Modal
+closeFormButton.addEventListener("click", () => {
+  addUserFormContainer.style.display="none";
+});

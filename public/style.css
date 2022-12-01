@@ -87,7 +87,7 @@ body, html{
   height: 100vh;
   width: 100vw;
   /* To hide Modal */
-  /* display: none; */
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;

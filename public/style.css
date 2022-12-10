@@ -21,6 +21,10 @@ body, html{
   background-color: #B8D8D8;
 }
 
+h1{
+  font-size: 1.2rem;
+}
+
 .banner{
   height: 70px;
   display: flex;
@@ -109,6 +113,10 @@ body, html{
   cursor: pointer;
 }
 
+.closeFormButton:hover{
+  transform: scale(1.1);
+}
+
 .formTitle{
   margin-bottom: 40px;
 }
@@ -150,4 +158,11 @@ body, html{
   border: 0;
   border-radius: 4px;
   cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+
+.submitFormInput:hover{
+  background-color: var(--dark-teal);
+  color: var(--tan);
+  transform: scaleY(1.03);
 }

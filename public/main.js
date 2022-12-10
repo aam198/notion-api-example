@@ -40,9 +40,11 @@ addData();
 newUserButton.addEventListener("click", () => {
   // Show modal
   addUserFormContainer.style.display="flex";
+  newUserButton.style.display="none";
 });
 
 // Close Modal
 closeFormButton.addEventListener("click", () => {
   addUserFormContainer.style.display="none";
+  newUserButton.style.display="block";
 });

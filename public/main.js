@@ -25,10 +25,14 @@ const addData = async () => {
     const div = document.createElement("div");
     div.classList.add("userContainer");
     div.innerHTML = `
-    <h3>${value.name}</h3>
-    <p>${value.address}</p>`;
-
+    <h3>Name: ${value.name}</h3>
+    <p>Address: ${value.address}</p>`;
+    const del = document.createElement("button");
+    del.classList.add("delete");
+    del.innerHTML= `
+    <i class="fa-solid fa-circle-xmark"></i>`
     container.append(div);
+    div.append(del);
   });
 };
 

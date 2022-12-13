@@ -58,12 +58,17 @@ h1{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 
   background-color: #EEF5DB;
   color: #3B494C;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 10px;
+  height: 25vh;
+}
+
+.userContainer p, .userContainer h3{
+  padding-left: 10px;
+  margin: 0;
 }
 
 .newUserButton{
